@@ -76,10 +76,17 @@ def run(
 
         improve = block["improve"]
         quick_wins = improve.get("quick_wins", [])
+        evidence = improve.get("evidence", [])
+
         if quick_wins:
             print("  [bold]Quick wins:[/bold]")
             for s in quick_wins[:5]:
                 print(f"    - {s}")
+
+        if evidence:
+            print("  [bold]Evidence:[/bold]")
+            for e in evidence[:8]:
+                print(f"    - {e}")
 
 
 if __name__ == "__main__":
